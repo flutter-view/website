@@ -1,0 +1,50 @@
+{% include header.html %}
+
+<div class="navbar-fixed">
+	<nav class="white">
+		<div class="nav-wrapper">
+			<a href="/" class="brand-logo grey-text text-darken-1">Flutter View</a>
+			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="https://flutter-view.gitbook.io" class="grey-text text-darken-1">Documentation</a></li>
+				<li><a href="https://github.com/flutter-view/flutter-view" class="grey-text text-darken-1">Github</a></li>
+				<li><a href="/blog" class="grey-text text-darken-1">Blog</a></li>
+				<li><a class="get-started waves-effect waves-light btn-flat blue white-text">Get Started</a></li>
+			</ul>
+		</div>
+	</nav>
+</div>
+
+<ul class="sidenav" id="mobile-demo">
+	<li><a href="https://flutter-view.gitbook.io">Documentation</a></li>
+	<li><a href="https://github.com/flutter-view/flutter-view">Github</a></li>
+</ul>
+
+<div class="container">
+	{{ content }}
+</div>
+
+<footer class="page-footer blue">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5 class="white-text"> {{ site.title }} </h5>
+				<p class="grey-text text-lighten-4"> {{ site.description }} </p>
+			</div>
+			<div class="col l4 offset-l2 s12">
+				<h5 class="white-text">Links</h5>
+				<ul>
+					<li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+					<li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+			© 2018 Copyright {{ site.name }} | All rights reserved.
+		</div>
+	</div>
+</footer>
+
+{% include footer.html %}
