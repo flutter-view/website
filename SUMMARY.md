@@ -4,7 +4,7 @@
 
 ## Get Started
 
-* [Installation](get-started/installation.md)
+* [Install](get-started/installation.md)
 
 ## Guide
 
