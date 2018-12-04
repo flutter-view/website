@@ -1,3 +1,3 @@
-## flutter-view
+![flutter-view demo animation](https://github.com/flutter-view/website/raw/master/images/flutter-view-demo-anim.gif)
 
-Work in progress, please come back in a week or so...
+<!-- # Create beautiful Flutter apps faster -->
