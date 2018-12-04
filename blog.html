@@ -3,10 +3,13 @@ layout: default
 permalink: /blog/
 ---
 
-<ul>
+<section id="posts">
 	{% for post in site.posts %}
-	<li>
-		<a href="{{ post.url }}">{{ post.title }}</a>
-	</li>
+		<div class='card z-depth-1'>
+			<div class="card-content">
+				<a href="{{ post.link }}"><h2>{{ post.title }}</h2></a>
+				{{ post.content }}
+			</div>
+		</div>
 	{% endfor %}
-</ul>
+</section>
