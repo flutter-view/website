@@ -13,7 +13,7 @@ One of the first things we noticed as we tried using Flutter for a big app, is t
 
 However we wanted to merge it with the strengths of Flutter. Flutter-view is only a light generator, always creating understandable code. It also respects the way Flutter names properties, and where no direct CSS property matches, we use the Flutter properties. Hot reload works as always, and if you use VS Code, we created some plugins so it even works on save.
 
-As it is, the documentation is still incomplete. We rushed to get this all up and running, and documenting will get priority now.
+As it is, the [documentation](https://docs.flutter-view.io) is still incomplete. We rushed to get this all up and running, and documenting will get priority now.
 
 Please enjoy using Flutter-view, and if you have any questions, feel free to contact.
 
