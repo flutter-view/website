@@ -24,6 +24,7 @@ title: Welcome to flutter-view
 					<i class="fas fa-space-shuttle fa-3x"></i>
 					<h2>Fast Layouts</h2>
 					<p>Easily set up Flutter layouts</p>
+					<p>Visual Studio code support</p>
 					<p>Use Pug mixins to create layouts per platform</p>
 					<p>Clean generated code</p>
 				</div>
@@ -36,13 +37,175 @@ title: Welcome to flutter-view
 				</div>
 				<div class='entry col s4'>
 					<i class="fas fa-layer-group fa-3x"></i>
-					<h2>Clean MVC</h2>
+					<h2>Clean MVC / MVVM</h2>
 					<p>Create a clear separation between model and views</p>
 					<p>Optional Dart library with reactive and layout tools</p>
 					<p>Special support for ScopedModel using the <b>reactive</b> tag</p>
 				</div>
 			</div>
 		</div>
+	</div>
+</section>
+
+<section>
+	<div class='card z-depth-3'>
+		<div class="card-content">
+			<div class="row">
+				<h1>Write Dart layouts using Pug or HTML:</h1>
+				<pre>
+<code class="language-pug">
+import(package='flutter_view_tools/flutter_view_tools.dart')
+import(package='counter/app-model.dart')
+
+
+home-page(flutter-view :model)
+	scaffold
+		app-bar(as='appBar')
+			#title(as='title') Welcome
+
+		center(as='body')
+			reactive(watch='model')
+				.message You have pushed:
+					.counter ${model.counter} times
+
+		floating-action-button#btn(
+			as='floatingActionButton'
+			tooltip='Increment'
+			@on-pressed='model.incrementCounter()')
+			icon(:value='Icons.add')								
+</code>
+			</pre>
+		</div>
+
+		<div class="row">
+			<h1>And style your layouts using Sass or CSS:</h1>
+			<pre>
+<code class="language-css">
+.message
+	margin-top: 200
+
+.counter
+	margin-top: 30
+	font-size: 25
+</code>
+			</pre>
+		</div>
+
+		<div class="row">
+			<h1>From this, flutter-view will generate normal Dart code for you:</h1>
+			<pre>
+<code class="language-dart">
+import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter_view_tools/flutter_view_tools.dart';
+import 'package:counter/app-model.dart';
+
+Scaffold HomePage({ @required model }) {
+  return Scaffold( // project://lib/pages/homepage/homepage.pug#6,2
+    appBar: AppBar( // project://lib/pages/homepage/homepage.pug#7,3
+      title: 
+      //-- TITLE ----------------------------------------------------------
+      Container( // project://lib/pages/homepage/homepage.pug#8,4
+        child: Text( 
+          'Welcome',
+        ),
+      ),
+    ),
+    body: Center( // project://lib/pages/homepage/homepage.pug#10,3
+      child: ReactiveWidget( // project://lib/pages/homepage/homepage.pug#11,4
+        watch: model as Listenable,
+        builder: (context, $) {
+          return 
+          //-- MESSAGE ----------------------------------------------------------
+          Container( // project://lib/pages/homepage/homepage.pug#12,5
+            child: Column( 
+              children: __flatten([
+                Text( 
+                  'You have pushed:',
+                ),
+                DefaultTextStyle.merge( 
+                  child: 
+                  //-- COUNTER ----------------------------------------------------------
+                  Container( // project://lib/pages/homepage/homepage.pug#13,6
+                    child: Text( 
+                      '${model.counter} times',
+                    ),
+                    margin: EdgeInsets.only(top: 30),
+                  ),
+                  style: TextStyle( 
+                    fontSize: 25,
+                  ),
+                )
+              ]),
+            ),
+            margin: EdgeInsets.only(top: 200),
+          );
+        },
+      ),
+    ),
+    floatingActionButton: 
+    //-- BTN ----------------------------------------------------------
+    FloatingActionButton( // project://lib/pages/homepage/homepage.pug#15,3
+      tooltip: 'Increment',
+      onPressed: () { model.incrementCounter(); },
+      child: Icon( // project://lib/pages/homepage/homepage.pug#19,4
+        Icons.add,
+      ),
+    ),
+  );
+}
+
+__flatten(List list) {
+  return List<Widget>.from(list.expand((item) {
+    return item is Iterable ? item : [item as Widget];
+  }));
+}
+</code>
+			</pre>
+		</div>
+
+		<div class="row">
+			<h1>Which you can use in your own Dart code:</h1>
+			<pre>
+<code class="language-dart">
+import 'package:flutter/material.dart';
+import 'package:counter/app-model.dart';
+import 'package:counter/pages/homepage/homepage.dart';
+
+void main() {
+	runApp(CounterApp());
+	}
+	
+	class CounterApp extends StatefulWidget {
+	@override
+		createState() => _CounterAppState();
+	}
+	
+	class _CounterAppState extends State<CounterApp> {
+	
+	/// Contains the state and functions of our application,
+	/// which we can pass down into fluttter-view functions
+	AppModel app;
+	
+	@override
+	void initState() {
+		super.initState();
+		app = AppModel();
+	}
+	
+	@override
+	build(context) => MaterialApp(
+			title: 'Counter App',
+			home: HomePage(model: app), // render the homepage, passing the model
+		);
+	}
+}	  
+</code>
+			</pre>
+		</div>
+
+		<h2>See the <a target="_blank" href="https://github.com/flutter-view/examples/tree/master/counter">full example</a>.</h2>
+
 	</div>
 </section>
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to flutter-view!"
+title: "Welcome to flutter-view!"
 ---
 
 Introducing Flutter-view, a new way to lay out and style your Flutter widgets.
