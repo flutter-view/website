@@ -176,14 +176,14 @@ import 'package:counter/pages/homepage/homepage.dart';
 
 void main() {
 	runApp(CounterApp());
-	}
+}
 	
-	class CounterApp extends StatefulWidget {
+class CounterApp extends StatefulWidget {
 	@override
-		createState() => _CounterAppState();
-	}
+	createState() => _CounterAppState();
+}
 	
-	class _CounterAppState extends State<CounterApp> {
+class _CounterAppState extends State<CounterApp> {
 	
 	/// Contains the state and functions of our application,
 	/// which we can pass down into fluttter-view functions
@@ -200,7 +200,6 @@ void main() {
 			title: 'Counter App',
 			home: HomePage(model: app), // render the homepage, passing the model
 		);
-	}
 }	  
 </code>
 			</pre>
