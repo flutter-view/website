@@ -41,7 +41,7 @@ title: Welcome to flutter-view
 					<i class="fas fa-layer-group fa-3x"></i>
 					<h2>Clean MVC / MVVM</h2>
 					<p><a target="docs" href="https://docs.flutter-view.io/#making-it-reactive">Create a clear separation<br> between model and views</a></p>
-					<p><a target="_blank" href="https://pub.dartlang.org/packages/flutter_view_tools">Optional Dart library with<br> reactive and layout tools</a></p>
+					<p><a target="_blank" href="https://pub.dartlang.org/packages/flutter_view_widgets">Optional Dart library with<br> reactive and layout tools</a></p>
 					<p><a target="docs" href="https://docs.flutter-view.io/reference/tag-shortcuts#reactive">Special support for ScopedModel<br> using the <b>reactive</b> tag</a></p>
 				</div>
 			</div>
@@ -56,7 +56,7 @@ title: Welcome to flutter-view
 				<h1>Write Dart layouts using Pug or HTML:</h1>
 				<pre>
 <code class="language-pug">
-import(package='flutter_view_tools/flutter_view_tools.dart')
+import(package='flutter_view_widgets/flutter_view_widgets.dart')
 import(package='counter/app-model.dart')
 
 
@@ -99,7 +99,7 @@ home-page(flutter-view :model)
 <code class="language-dart">
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_view_tools/flutter_view_tools.dart';
+import 'package:flutter_view_widgets/flutter_view_widgets.dart';
 import 'package:counter/app-model.dart';
 
 Scaffold HomePage({ @required model }) {

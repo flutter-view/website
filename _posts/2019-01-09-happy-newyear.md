@@ -2,6 +2,7 @@
 layout: post
 title: "Flutter-view 1.0.0 Released!"
 ---
+{{ page.date | date: '%B %d, %Y' }}
 
 # Happy new year!
 

@@ -2,6 +2,7 @@
 layout: post
 title: "Welcome to flutter-view!"
 ---
+{{ page.date | date: '%B %d, %Y' }}
 
 Introducing Flutter-view, a new way to lay out and style your Flutter widgets.
 
