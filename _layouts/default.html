@@ -1,28 +1,47 @@
 {% include header.html %}
 
 <div class="navbar-fixed">
-	<nav class="white">
-		<div class="nav-wrapper">
-			<a href="/" class="left brand-logo black-text">
-				<img src="https://github.com/flutter-view/website/raw/master/images/flutter-view.png">
-				Flutter-View
-			</a>
-			<!-- <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
-			<!-- <ul class="right hide-on-med-and-down"> -->
-			<ul class="right">
-				<li><a href="https://docs.flutter-view.io" class="grey-text text-darken-2">Documentation</a></li>
-				<li><a href="https://github.com/flutter-view/flutter-view" class="grey-text text-darken-2">Github</a></li>
-				<li><a href="/blog" class="grey-text text-darken-2">Blog</a></li>
-				<li><a href="https://docs.flutter-view.io" class="get-started waves-effect waves-light btn-flat blue white-text">Get Started</a></li>
-			</ul>
-		</div>
-	</nav>
+  <nav class="white">
+    <div class="nav-wrapper">
+      <a href="/" class="left brand-logo black-text">
+        <img
+          src="https://github.com/flutter-view/website/raw/master/images/flutter-view.png"
+        />
+        Flutter-View
+      </a>
+      <!-- <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
+      <!-- <ul class="right hide-on-med-and-down"> -->
+      <ul class="right">
+        <li>
+          <a href="https://docs.flutter-view.io" class="grey-text text-darken-2"
+            >Documentation</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/flutter-view/flutter-view"
+            class="grey-text text-darken-2"
+            >Github</a
+          >
+        </li>
+        <li><a href="/blog" class="grey-text text-darken-2">Blog</a></li>
+        <li>
+          <a
+            href="https://docs.flutter-view.io"
+            class="get-started waves-effect waves-light btn-flat blue white-text"
+            >Get Started</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
 </div>
 
 <div class="alert-bar">
-	<div class="alert-bar-wrapper">
-		Flutter-view 1.0.1 and flutter-view-widgets 1.0.6 updates have been released. <a href="/blog">Read more</a>
-	</div>
+  <div class="alert-bar-wrapper">
+    Flutter-view 1.0.2 has been released. It adds support for letter-spacing.
+    <a href="/blog">Read more</a>
+  </div>
 </div>
 
 <!-- <ul class="sidenav" id="mobile-demo">
@@ -33,32 +52,49 @@
 </ul> -->
 
 <div class="container">
-	{{ content }}
+  {{ content }}
 </div>
 
 <footer class="page-footer blue">
-	<div class="container">
-		<div class="row">
-			<div class="col l6 s12">
-				<h5 class="white-text"> flutter-view </h5>
-				<p class="grey-text text-lighten-4"> Faster Flutter MVVM layouts </p>
-				<p class="grey-text text-lighten-4"> By Christian Vogel <a href="http://twitter.com/christianvogel" style="color: lightblue">@christianvogel</a></p> 
-			</div>
-			<div class="col l4 offset-l2 s12">
-				<h5 class="white-text">Links</h5>
-				<ul>
-					<li><a href="https://docs.flutter-view.io" class="grey-text text-lighten-3">Documentation</a></li>
-					<li><a href="https://github.com/flutter-view/flutter-view" class="grey-text text-lighten-3">Github</a></li>
-					<li><a href="/blog" class="grey-text text-lighten-3">Blog</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="footer-copyright">
-		<div class="container">
-			© 2019 Copyright Christian Vogel | All rights reserved.
-		</div>
-	</div>
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">flutter-view</h5>
+        <p class="grey-text text-lighten-4">Faster Flutter MVVM layouts</p>
+        <p class="grey-text text-lighten-4">
+          By Christian Vogel
+          <a href="http://twitter.com/christianvogel" style="color: lightblue;"
+            >@christianvogel</a
+          >
+        </p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Links</h5>
+        <ul>
+          <li>
+            <a
+              href="https://docs.flutter-view.io"
+              class="grey-text text-lighten-3"
+              >Documentation</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/flutter-view/flutter-view"
+              class="grey-text text-lighten-3"
+              >Github</a
+            >
+          </li>
+          <li><a href="/blog" class="grey-text text-lighten-3">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      © 2019 Copyright Christian Vogel | All rights reserved.
+    </div>
+  </div>
 </footer>
 
 {% include footer.html %}
